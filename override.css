@@ -1,0 +1,196 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+/* fonts.css from the YUI Library: developer.yahoo.com/yui/
+   Please refer to developer.yahoo.com/yui/fonts/ for font sizing percentages
+
+  There are two custom edits:
+   * remove arial, helvetica from explicit font stack
+   * we normalize monospace styles ourselves
+*/
+body { font:13px/1.231 sans-serif; *font-size:small; } /* hack retained to preserve specificity */
+
+table { font-size:inherit; font: 100%; }
+
+select, input, textarea, button { font:99% sans-serif; }
+
+/* normalize monospace sizing 
+ * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
+ */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
+body, select, input, textarea { color: #444; background:none; border:0; }
+
+/* Headers (h1,h2,etc) have no default font-size or margin,
+   you'll want to define those yourself. */ 
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+/* colors for form validity */
+input:valid   {  }
+input:invalid { 
+      /*border-radius: 1px;*/
+    -moz-box-shadow: 0px 0px 5px red; 
+ -webkit-box-shadow: 0px 0px 5px red; 
+         box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid { background-color: #f0dddd; }
+
+/* Primary Styles
+    Author: 
+ */
+ #container{width:500px; /*height:350px;*/ margin:200px auto; display:block; position:relative; border: 1px solid #888;-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;/*-webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);box-shadow:0 5px 5px #888;*/border-radius:5px; padding:5px;font-family:Georgia, serif;font-size:12px;background:#fff; overflow:auto;}
+		
+#main{clear:both;}
+footer{position:absolute; text-align:center; bottom:0; left:0; width:98%; display:block; padding:3px;}
+h1{font-size:20px; color:#6DB9F2;}
+h2{font-size:14px;}
+strong{color:#6DB9F2;}
+input[type=text], input[type=search], input[type=email]{/*background:#EEE;*/
+	float:left;
+	margin: 0.7em 0.5em 0.7em 0;
+	border-bottom:1px solid #CCC;
+	padding: 2px 7px;
+	font-family:'Droid Serif', Georgia, serif;
+	/*width:385px;*/
+	height:24px;
+}
+input[type=text]:hover, input[type=search]:hover, input[type=email]:hover{
+	border-bottom:1px solid #000;
+}
+
+
+/* Corner */
+/*http://nicolasgallagher.com/css-drop-shadows-without-images/demo/*/
+
+.drop-shadow {
+            /*position:relative;
+            width:45%;    
+            padding:1em; 
+            margin:2em auto 5em; 
+            background:#fff;*/
+            -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+               -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        .drop-shadow:before,
+        .drop-shadow:after {
+            content:"";
+            position:absolute; 
+            z-index:-2;
+            bottom:15px;
+            left:10px;
+            width:50%;
+            height:20%;
+        }
+
+        .drop-shadow:after{                 
+            right:10px; 
+            left:auto;
+        }
+        
+        .round {
+            -moz-border-radius:4px; 
+                 border-radius:4px;
+        }
+        
+        .round:before,
+        .round:after { 
+            max-width:300px;
+            -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);   
+               -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+                    box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+            -webkit-transform:rotate(-3deg);    
+               -moz-transform:rotate(-3deg);   
+                 -o-transform:rotate(-3deg);
+                    transform:rotate(-3deg);
+        }
+        
+        .round:after {
+            -webkit-transform:rotate(3deg);   
+               -moz-transform:rotate(3deg);  
+                 -o-transform:rotate(3deg);
+                    transform:rotate(3deg);
+        }
+
+
+/* ME */
+
+header img{float:right;}
+header{padding:10px;}
+section{float:left; padding:3px;}
+input[type=text], input[type=email]{width: 134px;float:none !important;font-family: 'Dancing Script', courrier, sans-serif; font-size:24px; color:#000;}
+textarea{width:280px; height:150px; padding:5px; border:1px solid #ccc;-webkit-border-radius: 5px;-moz-border-radius: 5px; border-radius:5px; font-family: 'Dancing Script', courrier, sans-serif; font-size:24px;color:#000;}
+input[type=submit]{clear:both; margin:10px 0 30px 185px;}
+#infos{width:140px; }
+#message{border-right: 1px solid #CCC;width:300px; }
+.english{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC') center left no-repeat; padding-left:18px;}
+.french{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYiyeepkBBv79+Zfnx/f379+fP38CyT9//jAyMiq5GP77wvDnJ8MfoAIGBoAAYgGqC7STApL///3/9++/pCTv////Qdz/QO4/IMna0vf/z+9/v379//37bUUTQACBNDD8Z/j87fffvyAVX79+/Q8GQDbQeKA9fM+e/Pv18/+vnwzCIkBLAAKQOAY5AIAwCEv4/4PddNUm3ji0QJyxW3rgzE0iLfqDGr2oYuu0l54AYvnz5x9Q6d+/QPQfyAQqAin9B3EOyG1A1UDj//36zfjr1y8GBoAAFI9BDgAwCMIw+P8Ho3GDO6XQ0l4MN8b2kUwYaLszqgKM/KHcDXwBxAJUD3TJ779A8h9Q5D8SAHoARP36+Rfo41+/mcA2AAQQy49ff0Cu//MPpAeI/0FdA1QNYYNVA/3wmwEYVgwMAAHE8uPHH5BqoD1//gJJLADoJKDS378Z//wFhhJAALF8A3rizz8uTmYg788fJkj4QOKREQyYxSWBhjEC/fcXZANAALF8+/anbcHlHz9+ffvx58uPX9KckkCn/gby/wLd8uvHjx96k+cD1UGiGQgAAgwA7q17ZpsMdUQAAAAASUVORK5CYII=') center left no-repeat; padding-left:18px;}
+.error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error, .alert {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
+.notice {background:#fff6bf;color:#514721;border-color:#ffd324;}
+.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
+.info {background:#d5edf8;color:#205791;border-color:#92cae4;}
+.error a, .alert a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}
+.info a {color:#205791;}
+.myLink{padding-left:14px; background:url(http://shikiryu.com/favicon12.png) left center no-repeat;}
+body, html{background:#BB6029 url(contactbg.jpg) top left repeat; overflow:hidden; width:100%; height:100%;}
+#msgOK{display:none;width:200px; height:100px; margin:200px auto;position:relative;border: 1px solid #888;-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;-webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);border-radius:5px;box-shadow:0 5px 5px #888; padding:5px;font-family:Georgia, serif;font-size:12px;background:#fff; text-align:center;}
+
